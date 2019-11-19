@@ -1,0 +1,40 @@
+{
+  "name": "smol-jsonp",
+  "description": "small, promise-based, zero-dependency jsonp library for browsers. ~330b gzip",
+  "version": "0.0.0",
+  "author": "Renée Kooi <renee@kooi.me>",
+  "bugs": {
+    "url": "https://github.com/goto-bus-stop/smol-jsonp/issues"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "cross-env": "^6.0.3",
+    "envify": "^4.1.0",
+    "standard": "^14.0.0",
+    "tape": "^4.10.0",
+    "tape-run": "^6.0.1"
+  },
+  "homepage": "https://github.com/goto-bus-stop/smol-jsonp",
+  "keywords": [
+    "browser",
+    "cors",
+    "crossorigin",
+    "json",
+    "jsonp",
+    "promise",
+    "request",
+    "script"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/goto-bus-stop/smol-jsonp.git"
+  },
+  "scripts": {
+    "test:server": "node test/endpoint",
+    "test:client": "browserify test -t envify | tape-run",
+    "test:tape": "npm run test:server & npm run test:client",
+    "test": "standard && cross-env PORT=22148 npm run test:tape"
+  }
+}
