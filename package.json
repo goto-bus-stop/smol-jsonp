@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "browserify": "^16.5.0",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.2",
     "envify": "^4.1.0",
     "standard": "^14.0.0",
     "tape": "^4.10.0",
