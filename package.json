@@ -35,6 +35,8 @@
     "test:server": "node test/endpoint",
     "test:client": "browserify test -t envify | tape-run",
     "test:tape": "npm run test:server & npm run test:client",
-    "test": "standard && cross-env PORT=22148 npm run test:tape"
+    "tests-only": "cross-env PORT=22148 npm run test:tape",
+    "lint": "standard",
+    "test": "npm run lint && npm run tests-only"
   }
 }
