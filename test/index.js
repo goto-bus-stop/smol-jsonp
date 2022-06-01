@@ -1,5 +1,7 @@
-var jsonp = require('../')
-var tape = require('tape')
+'use strict'
+
+const jsonp = require('../')
+const tape = require('tape')
 
 tape('try it', function (t) {
   jsonp('http://localhost:' + process.env.PORT).then(function (result) {

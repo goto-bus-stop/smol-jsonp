@@ -1,3 +1,6 @@
+/* eslint-disable no-var */
+'use strict'
+
 var callbacks = {}
 var bagName = '__jsonpCallbacks'
 Object.defineProperty(window, bagName, { value: callbacks })
