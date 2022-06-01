@@ -12,7 +12,8 @@
     "envify": "^4.1.0",
     "standard": "^17.0.0",
     "tape": "^5.0.0",
-    "tape-run": "^9.0.0"
+    "tape-run": "^9.0.0",
+    "tsd": "^0.20.0"
   },
   "homepage": "https://github.com/goto-bus-stop/smol-jsonp",
   "keywords": [
@@ -26,7 +27,8 @@
     "script"
   ],
   "license": "Apache-2.0",
-  "main": "index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/goto-bus-stop/smol-jsonp.git"
@@ -36,7 +38,7 @@
     "test:client": "browserify test -t envify | tape-run",
     "test:tape": "npm run test:server & npm run test:client",
     "tests-only": "cross-env PORT=22148 npm run test:tape",
-    "lint": "standard",
+    "lint": "tsd && standard",
     "test": "npm run lint && npm run tests-only"
   }
 }
