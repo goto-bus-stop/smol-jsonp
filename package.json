@@ -13,7 +13,7 @@
     "standard": "^17.0.0",
     "tape": "^5.0.0",
     "tape-run": "^9.0.0",
-    "tsd": "^0.25.0"
+    "tsd": "^0.26.1"
   },
   "homepage": "https://github.com/goto-bus-stop/smol-jsonp",
   "keywords": [
